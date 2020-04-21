@@ -4,6 +4,14 @@ Incantations to bring Simmel to life.
 
 Bootloader is at https://github.com/simmel-project/bootloader.git
 
+```
+git clone git@github.com:simmel-project/bootloader.git
+cd bootloader
+git submodule init
+git submodule update
+make BOARD=simmel
+```
+
 Circuitpython is at https://github.com/simmel-project/circuitpython.git
 
 ```
@@ -16,6 +24,10 @@ git submodule update
 cd ports/nrf
 make BOARD=simmel
 ```
+You will want build-simmel/firmware.uf2
+
+
+Programming needs a build of openocd.
 
 1. Attach openocd using `./swd` and then telnet to localhost:4444
 2. Run `nrf51 mass_erase`
