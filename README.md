@@ -35,7 +35,7 @@ Initial programming needs a build of openocd.
 3. Run `program ../bootloader/_build/build-simmel/simmel_bootloader-0.3.2-56-g02b947e-nosd.hex`
 4. Run `program ../bootloader/lib/softdevice/s140_nrf52_7.0.1/s140_nrf52_7.0.1_softdevice.hex`
 5. Run `reset`
-6. Load `firmware.uf2` via USB from circuitpython
+6. Load `firmware.uf2` via USB from Circuit Python.
 
 ## Building Circuit Python (subsequent times)
 
@@ -57,3 +57,7 @@ cd ports/nrf               # Change to the NRF ports directory
 rm -rf build-simmel        # Remove any existing directory -- this is important if the .ld file changes
 make BOARD=simmel          # Build circuitpython
 ```
+
+## Loading Circuit Python
+
+You can load `build-simmel/firmware.elf` via GDB, or load `build-simmel/firmware.uf2` via the bootloader.
