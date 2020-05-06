@@ -12,19 +12,18 @@ git submodule update
 make BOARD=simmel
 ```
 
-Circuitpython is at https://github.com/simmel-project/circuitpython.git
+Circuitpython is upstream at https://github.com/adafruit/circuitpython.git
 
 ```
-git clone https://github.com/simmel-project/circuitpython.git
+git clone https://github.com/adafruit/circuitpython.git
 cd circuitpython
-git checkout simmel
 git submodule init
 git submodule sync
 git submodule update
 cd ports/nrf
 make BOARD=simmel
 ```
-You will want build-simmel/firmware.uf2
+You will want `build-simmel/firmware.uf2`.  If you're debugging, you'll also want `build-simmel/firmware.elf`.
 
 
 Programming needs a build of openocd.
