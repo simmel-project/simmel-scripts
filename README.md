@@ -28,7 +28,7 @@ make BOARD=simmel
 You will want `build-simmel/firmware.uf2`.  If you're debugging, you'll also want `build-simmel/firmware.elf`.
 
 
-Initial programming needs a build of openocd.
+Initial programming needs a build of openocd in order to update the `MBR`, which is a Nordic-specific construct.  On Simmel, the `MBR` is located at `0x7f000`.
 
 1. Attach openocd using `./swd` and then telnet to localhost:4444
 2. Run `nrf51 mass_erase`
